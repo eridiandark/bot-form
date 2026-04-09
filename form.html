@@ -1,0 +1,144 @@
+<html>
+  <head>
+    <style>
+      body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .full {
+      grid-column: span 2;
+    }
+
+    .btn {
+      margin-top: 20px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .btn:hover {
+      background: #45a049;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+  <h1>Добавить объявление</h1>
+
+  <form id="realtyForm">
+    
+    <div class="form-group">
+      <label>Тип недвижимости</label>
+      <select name="type">
+        <option>Квартира</option>
+        <option>Дом</option>
+        <option>Комната</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Адрес</label>
+      <input type="text" name="address" placeholder="Город, улица">
+    </div>
+
+    <div class="grid">
+      <div class="form-group">
+        <label>Площадь (м²)</label>
+        <input type="number" name="area">
+      </div>
+
+      <div class="form-group">
+        <label>Цена (грн)</label>
+        <input type="number" name="price">
+      </div>
+
+      <div class="form-group">
+        <label>Комнат</label>
+        <input type="number" name="rooms">
+      </div>
+
+      <div class="form-group">
+        <label>Этаж</label>
+        <input type="number" name="floor">
+      </div>
+
+      <div class="form-group">
+        <label>Этажность дома</label>
+        <input type="number" name="totalFloors">
+      </div>
+
+      <div class="form-group">
+        <label>Тип отопления</label>
+        <select name="heating">
+          <option>Центральное</option>
+          <option>Индивидуальное</option>
+          <option>Электро</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group full">
+      <label>Описание</label>
+      <textarea name="description" placeholder="Можно оставить пустым — сгенерируем автоматически"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Фото</label>
+      <input type="file" name="images" multiple>
+    </div>
+
+    <button class="btn" type="submit">Создать объявление</button>
+  </form>
+</div>
+  </body>
+</html>
